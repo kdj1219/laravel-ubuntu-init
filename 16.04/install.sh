@@ -29,6 +29,9 @@ function init_alias {
 }
 
 function init_repositories {
+    add-apt-repository -y ppa:ondrej/php
+    add-apt-repository -y ppa:nginx/stable
+
     apt-get update
 }
 
