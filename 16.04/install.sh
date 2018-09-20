@@ -29,10 +29,6 @@ function init_alias {
 }
 
 function init_repositories {
-    add-apt-repository -y ppa:ondrej/php
-    add-apt-repository -y ppa:nginx/stable
-    grep -rl ppa.launchpad.net /etc/apt/sources.list.d/ | xargs sed -i 's/ppa.launchpad.net/launchpad.proxy.ustclug.org/g'
-
     apt-get update
 }
 
