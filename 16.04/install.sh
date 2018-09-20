@@ -41,7 +41,6 @@ function install_basic_softwares {
 
 function install_node_yarn {
     apt-get install -y nodejs yarn
-    sudo -H -u ${WWW_USER} sh -c 'cd ~'
 }
 
 function install_php {
@@ -58,9 +57,8 @@ function install_others {
 }
 
 function install_composer {
-    wget https://dl.laravel-china.org/composer.phar -O /usr/local/bin/composer
+    wget https://getcomposer.org/download/1.7.2/composer.phar -O /usr/local/bin/composer
     chmod +x /usr/local/bin/composer
-    sudo -H -u ${WWW_USER} sh -c  'cd ~'
 }
 
 call_function init_system "正在初始化系统" ${LOG_PATH}
