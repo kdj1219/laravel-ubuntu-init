@@ -14,6 +14,8 @@ function init_system {
     locale-gen en_US.UTF-8
     locale-gen zh_CN.UTF-8
 
+    ln -sf /usr/share/zoneinfo/America/Los_Angeles /etc/localtime
+
     apt-get update
     apt-get install -y software-properties-common
 
