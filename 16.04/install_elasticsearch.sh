@@ -6,10 +6,7 @@ source ${CURRENT_DIR}/../common/common.sh
 [ $(id -u) != "0" ] && { ansi -n --bold --bg-red "请用 root 账户执行本脚本"; exit 1; }
 
 function install_java {
-    add-apt-repository -y ppa:linuxuprising/java
-    apt-get update
-    debconf-set-selections <<< "oracle-java10-installer shared/accepted-oracle-license-v1-1 select true"
-    apt-get install -y oracle-java10-installer
+    apt-get install -y default-jdk
 }
 
 function install_es {
