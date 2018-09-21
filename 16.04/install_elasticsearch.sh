@@ -31,6 +31,6 @@ function install_es_plugins {
 
 call_function install_java "正在安装 JAVA" ${LOG_PATH}
 call_function install_es "正在安装 Elasticsearch" ${LOG_PATH}
-call_function install_es_plugins "正在安装 Elasticsearch 插件" ${LOG_PATH}
+# call_function install_es_plugins "正在安装 Elasticsearch 插件" ${LOG_PATH}
 
 ansi --green --bold -n "安装完毕"
