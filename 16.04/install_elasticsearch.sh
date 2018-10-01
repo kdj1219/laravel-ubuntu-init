@@ -18,7 +18,7 @@ function install_es {
 }
 
 function install_es_plugins {
-    ESVersion=$(/usr/share/elasticsearch/bin/elasticsearch -V|awk -F',' '{print $1}'| awk '{print $2}')
+    ESVersion=$(/usr/share/elasticsearch/bin/elasticsearch -v|awk -F',' '{print $1}'| awk '{print $2}')
 
     [[ -e /usr/share/elasticsearch/plugins/analysis-ik ]] || {
         /usr/share/elasticsearch/bin/elasticsearch-plugin install --batch https://github.com/medcl/elasticsearch-analysis-ik/releases/download/v${ESVersion}/elasticsearch-analysis-ik-${ESVersion}.zip
@@ -31,6 +31,6 @@ function install_es_plugins {
 
 call_function install_java "正在安装 JAVA" ${LOG_PATH}
 call_function install_es "正在安装 Elasticsearch" ${LOG_PATH}
-# call_function install_es_plugins "正在安装 Elasticsearch 插件" ${LOG_PATH}
+call_function install_es_plugins "正在安装 Elasticsearch 插件" ${LOG_PATH}
 
 ansi --green --bold -n "安装完毕"
