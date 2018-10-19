@@ -26,7 +26,7 @@ echo -e "${green}安装脚本位于： ${HOME}/laravel-ubuntu-init${nc}"
     source ${HOME}/laravel-ubuntu-init/common/ansi.sh
     ansi -n --bold --bg-yellow --black "当前账户并非 root，请用 root 账户执行安装脚本（使用命令：sudo -H -s 切换为 root）"
 } || {
-    bash ./laravel-ubuntu-init/16.04/install.sh
+    # bash ./laravel-ubuntu-init/16.04/install.sh
 }
 
 cd - > /dev/null
